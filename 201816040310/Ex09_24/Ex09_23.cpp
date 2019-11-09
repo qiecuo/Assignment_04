@@ -5,6 +5,7 @@
 #include "DeckOfCards.h"
 using namespace std;
 
+inline void analysis(const vector<Card> &);      // analysis cards' condition
 inline bool hasOnePair(const vector<Card> &);    // 1对
 inline bool hasTwoPairs(const vector<Card> &);   // 2对
 inline bool hasThreeFaces(const vector<Card> &); // 3张同牌
@@ -13,36 +14,44 @@ inline bool hasFlush(const vector<Card> &);      // 同花
 inline bool hasShot(const vector<Card> &);       // 顺子
 int main()
 {
-    DeckOfCards deck;
+    DeckOfCards deck; // define a deck and shuffle it
     deck.shuffle();
-    array<vector<Card>, 4> side;
+
+    array<vector<Card>, 4> side; // deal card
     int curS = 0;
     for (int i = 0; i < 20; i++)
     {
         side[i % 4].push_back(deck.dealCard());
     }
-    for (int i = 0; i < 4; i++)
+
+    for (int i = 0; i < 4; i++) // display and analysis each sides' cards and
     {
         cout << "\nSIDE " << i + 1 << " :" << endl;
         for (Card card : side[i])
         {
             cout << card.toString() << endl;
         }
-        if (hasFourFaces(side[i]))
-            cout << "Four Faces" << endl;
-        else if (hasThreeFaces(side[i]))
-            cout << "Three Faces" << endl;
-        else if (hasTwoPairs(side[i]))
-            cout << "TWO PAIRS" << endl;
-        else if (hasOnePair(side[i]))
-            cout << "ONE PAIR" << endl;
-
-        if (hasFlush(side[i]))
-            cout << "Flush !!!" << endl;
-        if (hasShot(side[i]))
-            cout << "Shot !!!" << endl;
+        analysis(side[i]);
     }
 }
+
+inline void analysis(const vector<Card> &cards)
+{
+    if (hasFourFaces(cards)) 
+        cout << "Four Faces" << endl;
+    else if (hasThreeFaces(cards))
+        cout << "Three Faces" << endl;
+    else if (hasTwoPairs(cards))
+        cout << "TWO PAIRS" << endl;
+    else if (hasOnePair(cards))
+        cout << "ONE PAIR" << endl;
+
+    if (hasFlush(cards))
+        cout << "Flush !!!" << endl;
+    if (hasShot(cards))
+        cout << "Shot !!!" << endl;
+}
+
 inline bool hasOnePair(const vector<Card> &vec)
 {
     int suit[4] = {0};

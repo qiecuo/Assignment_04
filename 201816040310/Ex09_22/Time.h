@@ -4,20 +4,20 @@
 class Time
 {
 public:
-    Time(time_t);
-    void tick();
-    void setTime(time_t);
-	void setTime(int,int,int);
+    Time(time_t);                // arg's type time_t
+    void tick();                 // add one second to sec
+    void setTime(time_t);        // change time
+    void setTime(int, int, int); // h,m,s to change the time
     int getHour();
     int getMinute();
     int getSecond();
-    void printUniversal();
-    void printStandard();
-	void setHour(int h);
-	void setMinute(int m);	
-	void setSecond(int s);
+    void printUniversal(); //
+    void printStandard();  //
+    void setHour(int h);   // change hour
+    void setMinute(int m); // change minute
+    void setSecond(int s); // change second
+
 private:
-    int sec;
-    /* data */
+    int sec; // Seconds since midnight
 };
 #endif

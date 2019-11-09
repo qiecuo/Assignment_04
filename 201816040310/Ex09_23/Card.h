@@ -8,15 +8,16 @@ class Card
 {
 
 public:
-    static array<string, 4> eSuits;
-    static array<string, 13> eFaces;
-    Card(int, int);
+    static array<string, 4> eSuits;  // static data member store suites
+    static array<string, 13> eFaces; // static data member store faces
+    Card(int, int);                  // (face,suit)
     Card();
-    string toString();
+    string toString(); // show this card with string
     int getFace() const;
     int getSuit() const;
 
 private:
+    /*data*/
     int face;
     int suit;
 };
