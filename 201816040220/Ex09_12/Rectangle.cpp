@@ -3,7 +3,7 @@
 using namespace std;
 #include "Point.h"
 #include <cmath>
-#include "Rectangle.h" // Employee class definition
+#include "Rectangle.h" 
 
 Rectangle::Rectangle(float x1,float x2,float x3,float x4,float y1,float y2,float y3,float y4)
 {
