@@ -10,27 +10,27 @@ Card::Card(int faceNumber,int suitNumber)
     suit=suitNumber;
 }
 
-string Card::toString()              //杩斿洖鑺辫壊鍜岀墝
+string Card::toString()              //返回花色和牌
 {
     return faceName[face]+"-"+suitName[suit];
 }
 
-int Card::getFace()                   //鑾峰彇鐗?
+int Card::getFace()                   //获取牌
 {
     return face;
 }
-
-int Card::getSuit()                //鑾峰彇鑺辫壊
+ 
+int Card::getSuit()                  //获取花色      
 {
     return suit;
 }
 
-const string Card::faceName[totalFace]=                 //瀹氫箟13寮犵墝
+const string Card::faceName[totalFace]=                 //创建13张牌
 {
     "A","2","3","4","5","6","7","8","9","10","J","Q","K"
 };
 
-const string Card::suitName[totalSuit]=              //瀹氫箟4绉嶈姳鑹?
+const string Card::suitName[totalSuit]=              //创建4种花色
 {
     "红心","黑桃","梅花","方块"
 };
