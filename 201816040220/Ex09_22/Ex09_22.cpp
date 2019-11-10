@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-	 time_t now;              //使用时间戳
+     time_t now;              //使用时间戳
      time(&now);
      cout<<now<<endl;
 
