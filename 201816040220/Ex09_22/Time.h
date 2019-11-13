@@ -5,6 +5,8 @@ class Time
 {
 public:
    explicit Time(int now);
+   explicit Time(int,int,int);
+
    void setTime(int,int,int);       //设置时间
    void setHour(int);               //设置时
    void setMinute( int );            //设置分
