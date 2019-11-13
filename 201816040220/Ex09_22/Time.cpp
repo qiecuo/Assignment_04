@@ -14,7 +14,7 @@ Time::Time(int now)
     setTime(hour,minte,second);              //进入时间设置函数
 }
 
-Time::Time(int hour,int minte,int second )  //标准时间
+Time::Time(int hour,int minte,int second )  //进入设置标准时间
 {
     setTime(hour,minte,second);              //进入时间设置函数
 }
