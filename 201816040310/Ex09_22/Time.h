@@ -13,9 +13,9 @@ public:
     int getSecond();
     void printUniversal(); //
     void printStandard();  //
-    void setHour(int h);   // change hour
-    void setMinute(int m); // change minute
-    void setSecond(int s); // change second
+    Time &setHour(int h);   // change hour
+    Time &setMinute(int m); // change minute
+    Time &setSecond(int s); // change second
 
 private:
     int sec; // Seconds since midnight

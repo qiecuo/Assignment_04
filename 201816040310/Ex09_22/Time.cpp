@@ -31,35 +31,39 @@ void Time::setTime(int h, int m, int s)
 	setHour(h);
 	setMinute(m);
 	setSecond(s);
+	
 }
 
-void Time::setHour(int h)
+Time &Time::setHour(int h)
 {
 	if (h < 0 || h >= 24) // Verify the validity of the data
 	{
 		cout << "error , hour out of range [0,23]" << endl;
-		return;
+		return *this;
 	}
 	sec = sec % 3600 + h * 3600; // current min and sec + h*3600 (s)
+	return *this;
 }
-void Time::setMinute(int m)
+Time &Time::setMinute(int m)
 {
 	if (m < 0 || m > 60) // Verify the validity of the data
 	{
 		cout << "error, minute out of range [0,59]" << endl;
-		return;
+		return *this;
 	}
 	sec = getHour() * 3600 + m * 60 + sec % 60;
+	return *this;
 }
 
-void Time::setSecond(int s)
+Time &Time::setSecond(int s)
 {
 	if (s < 0 || s > 60) // Verify the validity of the data
 	{
 		cout << "error,second out of range [0,59]" << endl;
-		return;
+		return *this;
 	}
 	sec = getHour() * 3600 + getMinute() * 60 + s;
+	return *this;
 }
 
 void Time::printUniversal() // display suniversal time
