@@ -21,3 +21,4 @@ private:
 
 
 #endif // DECKOFCARD_H_INCLUDED
+
