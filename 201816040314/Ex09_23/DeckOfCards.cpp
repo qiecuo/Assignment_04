@@ -1,13 +1,14 @@
 
 #include "DeckOfCards.h"
 #include <time.h>
-
+#include <cstdlib>
 DeckOfCards::DeckOfCards()//default constructor
 {
     number=0;
     for(int i=1;i<14;i++)
         for(int j=1;j<5;j++)
         {
+
          deck.push_back(Card(i,j));
         }
 }
@@ -32,14 +33,11 @@ void DeckOfCards::shuffle()//shuffle function
 }
 Card & DeckOfCards::dealCard()//a function to return the next card
 {
-
-    if(number<52)
-    {
         currentCard=deck[number].getFace();
         currentCardSuit=deck[number].getFace();
         number++;
         return deck[number-1];
-    }
+
 
 }
 bool DeckOfCards::moreCards()//a function to judge whether there have cards
@@ -49,4 +47,5 @@ bool DeckOfCards::moreCards()//a function to judge whether there have cards
     else
         return false;
 }
+
 
