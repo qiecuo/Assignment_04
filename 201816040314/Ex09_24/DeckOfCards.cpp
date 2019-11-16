@@ -1,21 +1,21 @@
+
 #include "DeckOfCards.h"
 #include <time.h>
-#include <vector>
-#include "Card.h"
+#include <cstdlib>
 DeckOfCards::DeckOfCards()//default constructor
 {
     number=0;
     for(int i=1;i<14;i++)
         for(int j=1;j<5;j++)
         {
+
          deck.push_back(Card(i,j));
         }
 }
-void DeckOfCards::shuffle()//shuffle the poker
+void DeckOfCards::shuffle()//shuffle function
 {
-    cout<<"Shuffling..."<<endl;
     srand((unsigned)time(NULL));
-    int num=rand()%51;//to produce a random number
+    int num=rand()%51;
     for(int i=0;i<52;i++)
     {
         num=rand()%51;
@@ -29,31 +29,28 @@ void DeckOfCards::shuffle()//shuffle the poker
             i--;
 
     }
-    cout<<"Shuffle the end!"<<endl;
 
 }
 Card & DeckOfCards::dealCard()//a function to return the next card
 {
-
-    if(number<52)
-    {
         currentCard=deck[number].getFace();
         currentCardSuit=deck[number].getFace();
         number++;
         return deck[number-1];
-    }
+
 
 }
-bool DeckOfCards::moreCards()//to judge whether there have cards
+bool DeckOfCards::moreCards()//a function to judge whether there have cards
 {
-    if(number<52)//to judge whether there have cards
+    if(number<52)
         return true;
     else
         return false;
 }
-void DeckOfCards::hangOutCard()//a function to hang out the cards
+void DeckOfCards::hangOutCard()
 {
-    cout<<"Hand out poker:"<<endl;
+
+     cout<<"Hand out poker:"<<endl;
     vector<Card> card;
     int faceNumber=0;//to store the same face card number
     int suitNumber=0;//to store the same suit card number
@@ -64,7 +61,7 @@ void DeckOfCards::hangOutCard()//a function to hang out the cards
     int num=14;
     for(int i=0;i<5;i++)
     {
-        Card &p=dealCard();
+        Card p=dealCard();
         card.push_back(p);
         continueFace+=p.getFace();
         if(num>p.getFace())
@@ -110,7 +107,4 @@ void DeckOfCards::hangOutCard()//a function to hang out the cards
         cout<<"There are five poker with the continue face"<<endl<<endl;
     else
         cout<<"There are no five poker with the continue face"<<endl<<endl;
-
-
-}
-
+};
