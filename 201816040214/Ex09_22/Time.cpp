@@ -48,7 +48,7 @@ unsigned int Time::getSecond()
 void Time::printUniversal()
 {
     cout << setfill('0') << setw(2) << getHour() << ":"
-    << setw(2) << getMinute() << ":" << setw(2) << getSecond();//output time
+    << setw(2) << getMinute() << ":" << setw(2) << getAll_seconds();//output time
 }
 
 void Time::printStandard()
