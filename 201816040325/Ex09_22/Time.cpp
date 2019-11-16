@@ -33,7 +33,7 @@ void Time::setTime(int h, int m, int s)
 void Time::setHour( int h)
 {
     if (h >= 0&&h< 24 )
-        hour = (24-hour)*60*60;//把秒数存到hour里
+        hour = hour*60*60;//把秒数存到hour里
     else
         throw invalid_argument("hour must be 0-23");
 }
