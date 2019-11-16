@@ -14,7 +14,10 @@ int main()
     cout << "today all seconds are: " << seconds << "\n\n";
     Time t0(seconds);
     //output seconds
-    cout << "Now time is:" << t0.getHour() << ":" << t0.getMinute() << ":" << t0.getSecond() << endl;
+    cout << "Now standard time is:";
+    t0.printStandard();
+    cout << "\nNow universal time is:";
+    t0.printUniversal();
 
     //This is the code of Ex09_07
     /*int i = 0;
