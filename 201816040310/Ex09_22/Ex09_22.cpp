@@ -7,7 +7,10 @@ using namespace std;
 int main()
 {
     time_t curtime;
+    curtime=0;
+    cout<<curtime<<endl;
     time(&curtime); // use ctime lib to get current time
+    cout<<curtime<<endl;
 
     Time myTime(curtime); // use current time to initialize myTime
 
@@ -16,7 +19,7 @@ int main()
     cout << endl
          << endl;
 
-    myTime.setHour(23); // set time
+    myTime.setHour(3); // set time
     myTime.setMinute(59);
     myTime.setSecond(57);
 
