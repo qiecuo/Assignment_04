@@ -5,37 +5,39 @@
 
 using namespace std;
 
+//default constructor of the Time
 Time::Time()
 {
 
 }
 
+//Initialization constructor of the Time
 Time::Time(long int a)
 {
     setTime(a);
 }
-
+//set time
 void Time::setTime(long int a)
 {
     int temp;
     temp=a%86400;
     this->temp=temp;
 }
-
+//get  hour
 int Time::getHour()
 {
     int h;
     h=temp/3600+8;
     return h;
 }
-
+//get minute
 int Time::getMinute()
 {
     int m ;
     m=(temp%3600)/60;
     return m;
 }
-
+//get second
 int Time::getSecond()
 {
     int s;
@@ -55,14 +57,14 @@ void Time::display()
     cout <<((h==0||h ==12)? 12: h%12)<<":"<<setfill('0')<<setw(2)<<m<<":"<<setw(2)<<s;
     cout<<(h<12?" AM ":" PM ")<<endl;
 }
+//add seconds
 void Time::tick(int a)
 {
     int b=temp;
     for(int i=0;i<a;i++)
     {
-        b+=3600;
+        b+=1;
         setTime(b);
         display();
     }
 }
-
