@@ -1,18 +1,18 @@
 #include <iostream>
 
 using namespace std;
-#include"Time.h"
+#include"Rectangle.h"
 int main()
 {
-    char d;
-    Time a(d);
-    Time b(23,59,59);
-    cout<<"localtime is:";
-    b.printStandard();
-    cout<<"the time is:";
-    b.printStandard();
-    b.tick();
-    cout<<"after tick:";
-    b.printStandard();
+    Rectangle ac;
+    Rectangle b(15,19);
+    cout<<"the initial is:";
+    ac.print();
+    cout<<"custom value:";
+    b.print();
+    b.peri();
+    b.peri(15,18);
+    b.area();
+    b.area(15,18);
     return 0;
 }
