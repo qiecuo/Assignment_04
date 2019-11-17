@@ -1,0 +1,28 @@
+#include"Card.h"
+#include<array>
+#include<iomanip>
+#include<string.h>
+#define faces 14
+#define suits 4
+
+using namespace std;
+
+static array<string, faces> Face =
+    {
+    "A","1","2","3","4","5","6","7","8","9","10","J","Q","K"
+    };
+static array<string, suits> Suit =
+    {
+        "heart","spade","club","diamond"
+    };
+
+Card::Card(int x, int y)
+{
+    face = x;
+    suit = y;
+}
+
+string Card::toString()
+{
+    return Face[face] + " of " + Suit[suit];
+}
