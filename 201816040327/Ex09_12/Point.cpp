@@ -15,21 +15,27 @@ Point::Point(double inx,double iny)
     x=inx;
     y=iny;
 }
+
+//成员函数
+//设定x
 void Point::setx(double inx)
 {
     //set x
     x=inx;
 }
+//成员函数
 double Point::getx()
 {
     //get x
     return x;
 }
+//设定y
 void Point::sety(double iny)
 {
     //set x
     y=iny;
 }
+//成员函数
 double Point::gety()
 {
     // get x
