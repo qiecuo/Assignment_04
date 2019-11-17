@@ -200,6 +200,7 @@ bool DeckOfCards::serialFace()
     a = (deck[0].getFace()-deck[1].getFace()==deck[1].getFace()-deck[2].getFace()
        &&deck[0].getFace()-deck[1].getFace()==deck[2].getFace()-deck[3].getFace()
        &&deck[0].getFace()-deck[1].getFace()==deck[3].getFace()-deck[4].getFace())?true:false;
+    
     if(a)
         cout<<"There are five serial cards"<<endl;
     else
