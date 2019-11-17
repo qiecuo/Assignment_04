@@ -19,11 +19,13 @@ Rectangle::Rectangle (float length, float width);
 
 float Rectangle::Perimeter()
 {
+    //计算周长
     return 2*length+2*width;
 }
 
 float Rectangle::Area()
 {
+    //计算面积
     return length*width;
 }
 
