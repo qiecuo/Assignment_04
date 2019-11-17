@@ -17,13 +17,14 @@ int main() {
     float perimeter,area,width,length;
     
     length = R.getlength();
-    cout<<"this length is :"<<length<<endl;
+    cout<<length<<endl;
     width = R.getwidth();
-    cout<<"this width is :"<<width<<endl;
+    cout<<width<<endl;
     perimeter=R.perimeter();
-    cout<<"this perimeter is :"<<perimeter<<endl;
+    cout<<perimeter<<endl;
     area = R.area();
-    cout<<"this area is :"<<area<<endl;
+    cout<<area<<endl;
+    //
     
     return 0;
 }
