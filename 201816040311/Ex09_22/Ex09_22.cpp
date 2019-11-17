@@ -9,10 +9,8 @@ int main()
     time_t now = time(0);
     Time a(now);
     int b;
-    cout<<"--------------------------------\n"<<endl;
+    //enter the added seconds
+    cout <<"Please enter the added seconds:\n" <<endl;
     cin >> b;
-
-    cout << "UTC 日期和时间："<< now << endl;
     a.tick(b);
 }
-
