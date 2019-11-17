@@ -4,18 +4,16 @@
 class Time
 {
 private:
-    int temp;
+    int temp;//temp variable
 public:
-    Time();
-    Time(long int=0);
-    void setTime(long int);
-    int getHour();
-    int getMinute();
-    int getSecond();
+    Time();//default constructor of the Time
+    Time(long int=0);//Initialization constructor of the Time
+    void setTime(long int);//set Time
+    int getHour();//get hour
+    int getMinute();//get minute
+    int getSecond();//get second
+    void tick(int);//add second
     void display();
-    void tick(int);
-
 };
 
 #endif // TIME_H_INCLUDED
-
