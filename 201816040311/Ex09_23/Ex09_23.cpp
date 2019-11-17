@@ -9,7 +9,7 @@ int main()
     DeckOfCards b;
     b.shuffle();
     int c;
-    cout<<"Please input:"<<endl;
+    cout<<"Please input Number of poker :"<<endl;
     cin >> c;
     for(int i=0;i<c;i++)
     {
@@ -24,4 +24,3 @@ int main()
     }
     return 0;
 }
-
