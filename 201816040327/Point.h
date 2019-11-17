@@ -13,10 +13,10 @@
 
 using namespace std;
 
-class Rectangle
+class Point
 {
 public:
-    Rectangle (float, float);
+    Point (float, float);
     float Perimeter;
     float Area;
     void setlength (float);
