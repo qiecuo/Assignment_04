@@ -4,9 +4,10 @@
 #include <algorithm>
 #include<stdio.h>
 #include<stdlib.h>
-#define Random(x) (rand() % x)
+#define Random(x) (rand() % x)//Randomly generated x
 using  namespace std;
 
+//default constructor of the DeckOfCards
 DeckOfCards::DeckOfCards()
 {
     for(int i=1;i<5;i++)
@@ -19,23 +20,19 @@ DeckOfCards::DeckOfCards()
     }
 }
 
+//Random shuffle
 void DeckOfCards::shuffle()
-{
-    random_shuffle(deck.begin(),deck.end());
-}
-/*void DeckOfCards::shuffle()
 {
     int b=52;
     for(int i=0;i<b;i++)
     {
         Card  temp=deck[i];
         int j=Random(b);
-        cout << j<<endl;
         deck[i]=deck[j];
         deck[j]=temp;
     }
-}*/
-
+}
+//Check if there is still work
 bool DeckOfCards::moreCards()
 {
     if(currentCard<52)
@@ -48,10 +45,10 @@ bool DeckOfCards::moreCards()
     }
 }
 
+//retrun next card
 Card DeckOfCards::dealCard()
 {
     int a=currentCard;
     currentCard++;
     return deck[a];
 }
-
