@@ -13,12 +13,16 @@ private:
     int face;
     int suit;
 public:
+    //default constructor of the Card
     Card();
+    //Initialization constructor of the Card
     Card(int, int);
+    //set face
     void setface(int);
+    //set suit
     void setsuit(int);
+    //Return the string object
     string toString();
 };
 
 #endif // CARD_H_INCLUDED
-
